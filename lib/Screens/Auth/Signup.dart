@@ -104,107 +104,67 @@ class _SignupState extends State<Signup> {
                   ),
                 ],
               ),
-              MaterialButton(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(6),
+              Container(
+                width: double.infinity,
+                height: 50,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                      colors: [Colors.pink, Colors.purple]),
+                  borderRadius: BorderRadius.circular(10),
                 ),
-                color: Colors.deepOrange,
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Signup(),
-                      ));
-                },
-                child: Container(
-                  width: double.infinity,
-                  child: const Text(
-                    'Sign Up',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.center,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.transparent,
+                    shadowColor: Colors.transparent,
                   ),
+                  child: const Text("Log In",
+                      style: TextStyle(color: Colors.white, fontSize: 16)),
                 ),
               ),
               const SizedBox(
                 height: 20,
               ),
-              MaterialButton(
-                shape: RoundedRectangleBorder(
+              OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 50),
                   side: const BorderSide(color: Colors.grey),
-                  borderRadius: BorderRadius.circular(6),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
                 ),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Signup(),
-                      ));
-                },
-                child: Container(
-                  width: double.infinity,
-                  child: const Row(
+                onPressed: () {},
+                icon: const Icon(Icons.g_mobiledata, color: Colors.white),
+                label: const Text("Log in with Google",
+                    style: TextStyle(color: Colors.white)),
+              ),
+              const SizedBox(height: 10),
+              OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 50),
+                  side: const BorderSide(color: Colors.grey),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                ),
+                onPressed: () {},
+                icon: const Icon(Icons.facebook, color: Colors.blue),
+                label: const Text("Log in with Facebook",
+                    style: TextStyle(color: Colors.white)),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Center(
+                child: RichText(
+                  text: const TextSpan(
+                    text: "Already have an account? ",
+                    style: TextStyle(color: Colors.grey),
                     children: [
-                      Icon(Icons.g_mobiledata, color: Colors.white, size: 30),
-                      Text(
-                        'Sign Up with Goggle',
+                      TextSpan(
+                        text: "Login",
                         style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.center,
+                            color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                     ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              MaterialButton(
-                shape: RoundedRectangleBorder(
-                  side: const BorderSide(color: Colors.grey),
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Signup(),
-                      ));
-                },
-                child: Container(
-                  width: double.infinity,
-                  child: const Row(
-                    children: [
-                      Icon(Icons.facebook, color: Colors.white, size: 30),
-                      Text(
-                        'Sign Up with Facebook',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: const Center(
-                  child: Text(
-                    'Already have an account?Login',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                    ),
                   ),
                 ),
               ),
