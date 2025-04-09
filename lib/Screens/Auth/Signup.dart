@@ -120,79 +120,46 @@ class _SignupState extends State<Signup> {
               const SizedBox(
                 height: 20,
               ),
-              MaterialButton(
-                shape: RoundedRectangleBorder(
+              OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 50),
                   side: const BorderSide(color: Colors.grey),
-                  borderRadius: BorderRadius.circular(6),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
                 ),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Signup(),
-                      ));
-                },
-                child: Container(
-                  width: double.infinity,
-                  child: const Row(
-                    children: [
-                      Icon(Icons.g_mobiledata, color: Colors.white, size: 30),
-                      Text(
-                        'Sign Up with Goggle',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
+                onPressed: () {},
+                icon: const Icon(Icons.g_mobiledata, color: Colors.white),
+                label: const Text("Log in with Google",
+                    style: TextStyle(color: Colors.white)),
+              ),
+              const SizedBox(height: 10),
+              OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 50),
+                  side: const BorderSide(color: Colors.grey),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
                 ),
+                onPressed: () {},
+                icon: const Icon(Icons.facebook, color: Colors.blue),
+                label: const Text("Log in with Facebook",
+                    style: TextStyle(color: Colors.white)),
               ),
               const SizedBox(
                 height: 20,
               ),
-              MaterialButton(
-                shape: RoundedRectangleBorder(
-                  side: const BorderSide(color: Colors.grey),
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Signup(),
-                      ));
-                },
-                child: Container(
-                  width: double.infinity,
-                  child: const Row(
+              Center(
+                child: RichText(
+                  text: const TextSpan(
+                    text: "Already have an account? ",
+                    style: TextStyle(color: Colors.grey),
                     children: [
-                      Icon(Icons.facebook, color: Colors.white, size: 30),
-                      Text(
-                        'Sign Up with Facebook',
+                      TextSpan(
+                        text: "Login",
                         style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.center,
+                            color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                     ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: const Center(
-                  child: Text(
-                    'Already have an account?Login',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                    ),
                   ),
                 ),
               ),
