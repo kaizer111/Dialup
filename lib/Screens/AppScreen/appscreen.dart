@@ -1,4 +1,6 @@
+import 'package:dialup/Screens/Auth/Signup.dart';
 import 'package:dialup/constants/color.dart';
+import 'package:dialup/utils/device_size.dart';
 import 'package:flutter/material.dart';
 
 class Appscreen extends StatelessWidget {
@@ -13,7 +15,7 @@ class Appscreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 60),
             child: Container(
-              height: 400,
+              height: displayHeight(context)*0.45,
               width: double.infinity,
               child: Image.asset('assets/images/dialuplogo.png'),
             ),
@@ -48,10 +50,12 @@ class Appscreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20, right: 20,bottom: 10,top: 20),
             child: MaterialButton(
               color: AppColor.light,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Signup(),));
+              },
               child: Container(
                 width: double.infinity,
-                height: 50,
+                height: displayHeight(context)*0.06,
                 child: Center(
                   child: Text('SignUp',
                       style: TextStyle(
@@ -66,7 +70,7 @@ class Appscreen extends StatelessWidget {
               color: AppColor.light,
               onPressed: () {},
               child: Container(
-                height: 50,
+                height: displayHeight(context)*0.06,
                 width: double.infinity,
                 child: Center(
                   child: Text('SignIn',
@@ -78,13 +82,13 @@ class Appscreen extends StatelessWidget {
           ),
           Divider(indent: 20,endIndent: 20,
             color: Colors.white,
-            height: 20,
+            height: displayHeight(context)*0.02,
             thickness: 1,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20),
             child: Container(
-              height: 60,
+              height: displayHeight(context)*0.10,
               width: double.infinity,
               child: Image.asset('assets/images/img.icons8.png'),
             ),

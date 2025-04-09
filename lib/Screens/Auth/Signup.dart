@@ -1,3 +1,5 @@
+import 'package:dialup/Screens/Homescreen/homescreen.dart';
+import 'package:dialup/constants/color.dart';
 import 'package:dialup/main.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +14,7 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColor.primary,
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 20),
         child: SingleChildScrollView(
@@ -90,36 +92,29 @@ class _SignupState extends State<Signup> {
                           borderRadius: BorderRadius.circular(6))),
                 ),
               ),
-              Row(
-                children: [
-                  Checkbox(
-                    value: false,
-                    onChanged: (value) {},
-                    checkColor: Colors.white,
-                    activeColor: Colors.blue,
-                  ),
-                  const Text(
-                    "Must be at least 8 characters",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ],
-              ),
-              Container(
-                width: double.infinity,
-                height: 50,
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                      colors: [Colors.pink, Colors.purple]),
-                  borderRadius: BorderRadius.circular(10),
+              MaterialButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(6),
                 ),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.transparent,
-                    shadowColor: Colors.transparent,
+                color: Colors.deepOrange,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Homepage(),
+                      ));
+                },
+                child: Container(
+                  width: double.infinity,
+                  child: const Text(
+                    'Sign Up',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  child: const Text("Log In",
-                      style: TextStyle(color: Colors.white, fontSize: 16)),
                 ),
               ),
               const SizedBox(

@@ -1,4 +1,5 @@
-import 'package:dialup/Screens/homescreen.dart';
+import 'package:dialup/Screens/AppScreen/appscreen.dart';
+import 'package:dialup/Screens/Homescreen/homescreen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -18,7 +19,7 @@ class Dialup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Homepage(),
+      home: Appscreen(),
     );
   }
 }
