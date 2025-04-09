@@ -1,3 +1,5 @@
+import 'package:dialup/Screens/Homescreen/homescreen.dart';
+import 'package:dialup/constants/color.dart';
 import 'package:dialup/main.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +14,7 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColor.primary,
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 20),
         child: SingleChildScrollView(
@@ -90,20 +92,6 @@ class _SignupState extends State<Signup> {
                           borderRadius: BorderRadius.circular(6))),
                 ),
               ),
-              Row(
-                children: [
-                  Checkbox(
-                    value: false,
-                    onChanged: (value) {},
-                    checkColor: Colors.white,
-                    activeColor: Colors.blue,
-                  ),
-                  const Text(
-                    "Must be at least 8 characters",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ],
-              ),
               MaterialButton(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6),
@@ -113,7 +101,7 @@ class _SignupState extends State<Signup> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Signup(),
+                        builder: (context) => Homepage(),
                       ));
                 },
                 child: Container(
