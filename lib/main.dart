@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 /*
   Project Name : Dialup
-  Project Authors : Vishal Mahato , Prabhat Kumar , Jay Kishan Mahat
+  Project Authors : Vishal Mahato , Prabhat Kumar , Jay Kishan Mahato
   Creation Date : 4th april, 2025
 
 */
